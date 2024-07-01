@@ -63,10 +63,14 @@
 }
 
 .multi-select-filter {
+  position: relative; 
+  z-index: 1050;
+
   .options {
     max-height: 570px;
     overflow-y: scroll;
     font-family: 'Courier New', Courier, monospace;
+    /* z-index: 1050;  */
   }
 
   .options::-webkit-scrollbar {
@@ -128,3 +132,4 @@
 .hours-not-fulfilled {
   color: red;
 }
+
