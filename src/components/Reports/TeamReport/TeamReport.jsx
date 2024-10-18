@@ -540,6 +540,30 @@ export function TeamReport({ match }) {
                     <td>{handleDate(team.modifiedDatetime)}</td>
                   </tr>
                 ))*/}
+                {memoizedSearchResults.map((team, index) => (
+    <tr className={`table-row ${darkMode ? 'bg-yinmn-blue text-light table-hover-dark' : ''}`} key={team._id}>
+      <td>
+        <input
+          type="checkbox"
+          onChange={event => handleSelectTeam(event, team, index)}
+          checked={selectedTeams.some(st => st.selectedTeam._id === team._id)}
+          disabled={
+            selectedTeams.length === 4 &&
+            !selectedTeams.some(st => st.selectedTeam._id === team._id)
+          }
+        />
+      </td>
+      <td>
+        <strong>{team.teamName}</strong>
+      </td>
+      <td>{handleStatus(team.isActive)}</td>
+      <td>{/* Team members logic here */}</td>
+      <td>{team._id}</td>
+      <td>{handleDate(team.createdDatetime)}</td>
+      <td>{handleDate(team.modifiedDatetime)}</td>
+    </tr>
+))}
+
               </tbody>
             ) : (
               <tbody>
