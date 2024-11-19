@@ -89,3 +89,8 @@
   justify-content: center;
   gap: 0.5rem;
 }
+.scrollable-tbody {
+  display: block; /* Only affects <tbody>, not the entire table */
+  max-height: 200px; /* Limit visible rows */
+  overflow-y: auto; /* Add vertical scrolling */
+}
