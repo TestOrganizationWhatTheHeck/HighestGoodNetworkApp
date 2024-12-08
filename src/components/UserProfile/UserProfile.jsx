@@ -1329,7 +1329,7 @@ function UserProfile(props) {
                   </Button>
                 </Link>
               )}
-              {canEdit && activeTab && (
+              {(canEdit && activeTab || canEditTeamCode) && (
                 <>
                   <SaveButton
                     className="mr-1 btn-bottom"
