@@ -227,7 +227,7 @@ const AddProject = (props) => {
               <div className="input-group">
                 <input
                   type="text"
-                  className="form-control"
+                  className={`form-control ${darkMode ? 'bg-yinmn-blue border-0 text-light' : ''}`}
                   id="wbsName"
                   placeholder="Enter WBS name"
                   value={wbsName}
@@ -261,7 +261,7 @@ const AddProject = (props) => {
               <div className="input-group">
                 <input
                   type="text"
-                  className="form-control"
+                  className={`form-control ${darkMode ? 'bg-yinmn-blue border-0 text-light' : ''}`}
                   id="memberName"
                   placeholder="Search for members"
                   value={memberName}

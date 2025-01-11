@@ -114,7 +114,7 @@ const Members = props => {
               <input
                 autoFocus
                 type="text"
-                className="form-control"
+                className={`form-control ${darkMode ? 'bg-yinmn-blue border-0 text-light' : ''}`}
                 aria-label="Search user"
                 placeholder="Name"
                 onChange={e => handleInputChange(e)}

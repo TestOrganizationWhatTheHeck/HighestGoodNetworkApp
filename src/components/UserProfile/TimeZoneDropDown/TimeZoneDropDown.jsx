@@ -11,6 +11,7 @@ import timeZoneMap from 'constants/timeZones';
  */
 const TimeZoneDropDown = props => {
   const id = props.id || 'timeZone';
+  const { darkMode } = props;
 
   useEffect(() => {
     if (props.filter !== undefined && props.filter !== '') {
@@ -29,7 +30,7 @@ const TimeZoneDropDown = props => {
       data-testid="time_zone_dropdown"
       id={props.id || 'timeZone'}
       name={props.name || 'timeZone'}
-      className="form form-control"
+      className={`form form-control ${darkMode ? 'bg-darkmode-liblack border-0 text-light' : ''}`}
       onChange={props.onChange}
       defaultValue={props.selected}
     >

@@ -8,7 +8,8 @@ const BlueSquare = (props) => {
   const {
     blueSquares,
     handleBlueSquare,
-    hasPermission
+    hasPermission,
+    darkMode
   } = props;
 
   const canAddInfringements = hasPermission('addInfringements');
@@ -27,7 +28,7 @@ const BlueSquare = (props) => {
   };
 
   return (
-    <div className="blueSquareContainer">
+    <div className={`blueSquareContainer ${darkMode ? 'bg-darkmode-liblack' : ''}`}>
       <div className={`blueSquares ${blueSquares?.length ? '' : 'NoBlueSquares'}`}>
         {blueSquares?.length ? (
           blueSquares
